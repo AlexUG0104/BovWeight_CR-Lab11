@@ -12,7 +12,6 @@ on:
 
 jobs:
   frontend-tests:
-
     runs-on: ubuntu-latest
 
    steps:
@@ -28,8 +27,8 @@ jobs:
   - name: Install dependencies
     run: npm install
 
-  - name: Validate project
-    run: echo "Build skipped temporarily"
+      - name: Validate project
+        run: echo "Build skipped temporarily"
 
   - name: Run tests
     run: echo "Tests passed"
