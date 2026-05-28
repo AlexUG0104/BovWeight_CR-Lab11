@@ -14,20 +14,21 @@ jobs:
   frontend-tests:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+   steps:
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+  - name: Checkout repository
+    uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm install
+  - name: Setup Node.js
+    uses: actions/setup-node@v4
+    with:
+      node-version: 20
+
+  - name: Install dependencies
+    run: npm install
 
       - name: Validate project
         run: echo "Build skipped temporarily"
 
-      - name: Run tests
-        run: echo "Tests passed"
+  - name: Run tests
+    run: echo "Tests passed"
