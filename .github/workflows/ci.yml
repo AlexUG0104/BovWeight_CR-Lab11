@@ -12,24 +12,22 @@ on:
 
 jobs:
   frontend-tests:
-
     runs-on: ubuntu-latest
 
-steps:
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-  - name: Checkout repository
-    uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-  - name: Setup Node.js
-    uses: actions/setup-node@v4
-    with:
-      node-version: 20
+      - name: Install dependencies
+        run: npm install
 
-  - name: Install dependencies
-    run: npm install
+      - name: Validate project
+        run: echo "Build skipped temporarily"
 
-  - name: Validate project
-    run: echo "Build skipped temporarily"
-
-  - name: Run tests
-    run: echo "Tests passed"
+      - name: Run tests
+        run: echo "Tests passed"
